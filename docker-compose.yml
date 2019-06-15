@@ -1,0 +1,21 @@
+version: '3'
+services: 
+  web:
+    # build: .
+    build: 
+      context: .                  #all folders and files from the same directory as docker-compose
+      dockerfile: Dockerfile.dev  #self-customized dockerfile 
+
+    ports: 
+      - "5007:3000"
+    volumes: 
+      - //app/node_modules
+      - .://app
+  test:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes: 
+      - //app/node_modules
+      - .://app
+    command: ["npm", "run", "test"]
