@@ -8,9 +8,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          bye there
-          hi again
-          
+          {/* bye there
+          hi again */}
+          HI THIS IS THE CHANGES IN NEW BRANCH "Feature"
         </p>
         <a  
           className="App-link"
